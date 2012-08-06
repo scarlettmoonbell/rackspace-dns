@@ -19,8 +19,7 @@ include?("cloud")
 
       apikey = new_resource.rackspace_api_key || creds['raxapikey']
       username = new_resource.rackspace_username || creds['raxusername']
-      @@cdns ||= Fog::Monitoring::Rackspace.new(:rackspace_api_key => apikey, :rac
-kspace_username => username)
+      @@cdns ||= Fog::Monitoring::Rackspace.new(:rackspace_api_key => apikey, :rackspace_username => username)
       @@cdns
     end
 
